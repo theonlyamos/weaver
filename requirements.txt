@@ -12,7 +12,6 @@ MarkupSafe==2.1.1
 netifaces==0.10.6
 python-engineio==4.3.3
 python-socketio==5.7.0
-socketio==0.2.1
 Werkzeug==2.1.2
 zope.event==4.5.0
 zope.interface==5.4.0

