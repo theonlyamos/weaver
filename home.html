@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weaver</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome-all.min.css">
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+    <!--<script type="text/javascript" src="static/js/index.js"></script>-->
+    <script type="text/javascript" src="static/js/sha512.min.js"></script>
+    <script type="text/javascript" src="static/js/script.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="static/js/popper.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/js/ws.js"></script>
+</head>
+<body class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="d-flex flex-column mt-5" id="machines">
+                </div>
+            </div>
+            <div class="col-md-4 d-none"></div>
+        </div>
+    </div>
+    <div class="dash-container position-absolute w-100">
+        <div class="container">
+            <div class="cmd_titlebar dashbar w-100">
+                <div class="cmd_title ps-2">
+                    <div class="cmd_line d-flex justify-content-start align-items-center">
+                        <input type="text" class="cmd_input outline-none ms-1 w-100" id="cmd_input" autofocus/>
+                        <label class="border-start border-dark bg-white text-dark rounded-end p-0 ps-1 pe-2">
+                            <i class="fas fa-paper-plane fa-fw dash-send-icon"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

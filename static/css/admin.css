@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #00b7ea 0%,#009ec3 100%);
+}
+
+a,a:link,a:focus {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    width: 97%;
+    margin: 5px auto;
+    box-shadow: 1px 1px 1px 1px #888;
+}
+
+
+header img {
+    width: 5%;
+    height: auto;
+}
+
+header h2 {
+    color: white;
+    font-family: monospace;
+    font-size: 1em;
+    text-transform: uppercase;
+
+}
+
+header > * {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2%;
+}
+
+img.logout-button {
+    float: right;
+    cursor: pointer;
+}
+
+img.close:hover {
+    filter: invert(60%);
+    -webkit-filter: invert(60%);
+}
+
+
+nav {
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+
+}
+
+div.tab {
+    display: inline-block;
+    width: 20%;
+    cursor: pointer;
+    padding-top: 3px;
+    padding-bottom: 4px;
+}
+
+.tab:hover {
+    background: rgba(0,0,0,0.3);
+}
+
+.current_tab {
+    display: block;
+    background: rgba(0,0,0,0.3);
+}
+
+
+img.tabimg {
+    width: 40%;
+    height: auto;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+section {
+    width: 100%;
+    overflow: auto;
+}
+
+article {
+    display: none;
+    width: 100%;
+}
+
+article h5 {
+    padding: 7px;
+    font-size: 1em;
+    background: linear-gradient(#eee,#ddd);
+    color: #222;
+    text-align: center;
+    font-family: Arial;
+}
+
+h3 {
+    font-size: 1.2em;
+    border-bottom: 1px solid grey;
+    text-align: center;
+    font-family: Arial;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.tooltab {
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.tooltab img {
+    width: 5%;
+    height: auto;
+}
+
+.tooltab h4 {
+    color: white;
+    font-family: monospace;
+    font-size: 1em;
+    text-transform: uppercase;
+
+}
+
+.tooltab > * {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+img.close {
+    float: right;
+    cursor: pointer;
+}
+
+img.close:hover {
+    filter: invert(60%);
+    -webkit-filter: invert(60%);
+}
+
+
+textarea {
+    width: 99%;
+    height: 120px;
+    border: none;
+}
+
+.help-box label {
+    color: yellow;
+    font-family: "Arial";
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.complain-button {
+    float: right;
+    padding: 7px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    background: #4CAF50;
+    color: white;
+}
+
+
+div.loader-page {
+    display: none;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,50%);
+    background: white;
+    z-index: 999999;
+    box-shadow: 1px 1px 1px grey;
+}
+
+img.loading {
+    display: block;
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+td h3 {
+    display: block;
+    font-size: 0.8rem;
+    border: none;
+    padding: 1px;
+    font-family: monospace;
+    text-align: left;
+    text-align: center;
+}
+
+td h3.uname {
+    color: Navy;
+}
+
+td.amount {
+    text-align: right;
+    font-weight: bold;
+    color: brown;
+}
+
+td.num {
+    color: red;
+}
+
+tr {
+    background: rgba(0,0,0,0.3);
+
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+    color: black;
+}
+
+table.pledges td {
+    font-size: 0.8rem;
+}
+
+table.payouts td {
+    font-size: 0.8rem;
+}
+
+.pledge-details {
+    width: 90%;
+    position: fixed;
+    top: 0;
+    right: 50%;
+    transform: translate(50%,50%);
+    background: linear-gradient(to bottom, #00b7ea 0%,#009ec3 100%);
+    border-radius: 3px;
+}
+
+.redeemed-details {
+    width: 90%;
+    position: fixed;
+    top: 0;
+    right: 50%;
+    transform: translate(50%,50%);
+    background: linear-gradient(to bottom, #00b7ea 0%,#009ec3 100%);
+    border-radius: 3px;
+}
+
+table.pd-details {
+    margin: 10px auto;
+    width: 90%;
+    border-collapse: collapse;
+    display: block;
+
+}
+
+input[type='button'] {
+    border: none;
+    padding: 3% 6%;
+    margin: 5px 10px;
+    display: inline-block;
+    color: white;
+}
+
+input[type='button']:hover {
+    font-weight: bold;
+}
+
+input.delete {
+    background: linear-gradient(#900,#a00);
+}
+
+input.redeem {
+    background: linear-gradient(#090,#0a0);
+}
+
+input.payout {
+    background: linear-gradient(#009,#00a);
+    float: right;
+}
+
+img.close {
+    float: right;
+    display: block;
+}
+
+img.close:hover {
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+}
+
+img.refresh {
+    float: right;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+img.refresh:hover {
+    -webkit-filter: invert(50%);
+    filter: invert(50%);
+}
+
+ul.feeds-list {
+    list-style: none;
+    color: white;
+    font-family: monospace;
+    width: 97%;
+    max-height: 3.5em;
+    padding: 3px;
+    margin: 5px auto;
+    background: rgba(0,0,0,0.3);
+    overflow: hidden;
+    font-size: 0.8em;
+}
+
+ul.feeds-list:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+li.content {
+    font-weight: bold;
+}
+
+textarea {
+    height: 120px;
+    border: none;
+}
+
+div.feed-details {
+    width: 97%;
+    background: linear-gradient(#888,#999);
+    position: fixed;
+    top: 0;
+    right: 50%;
+    transform: translate(50%,20%);
+    color: white;
+    font-family: monospace;
+}
+
+input.reply {
+    background: linear-gradient(#090,#0a0);
+    float: right;
+}
+
+.feed-details ul {
+    padding: 5px;
+}
+
+div.notification {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 70%;
+    right: 90%;
+    transform: translate(50%,50%);
+    z-index: 999999;
+}
+
+img.notify {
+    margin: 3px;
+    width: 90%;
+    height: auto;
+    opacity: 0.5;
+}
+
+span.notifier {
+    position: absolute;
+    top: 40%;
+    right: 42%;
+    color: red;
+}
+
+table.all {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    font-family: georgia;
+}
+
+div.search_bar {
+    width: 100%;
+    background: GhostWhite;
+}
+
+div > * {
+    display: inline;
+    margin: 0;
+}
+
+input[type='search'] {
+    width: 100%;
+    border: 0;
+    outline: none;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+    font-family: georgia;
+    color: #666;
+    background: GhostWhite;
+    padding: 1%;
+}
+
+table.users th {
+    text-align: center;
+    font-weight: bold;
+}
+
+table.users h3.amount {
+    color: red;
+}
+
+.send-message {
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: auto;
+}
+
+input.message {
+	width: 65%;
+	padding:8px 15px;
+	background:rgba(50, 50, 50, 0.2);
+	border:0px solid #dbdbdb;
+}
+
+input.message-button {
+	position: relative;
+	padding: 6px 15px;
+	left:-15px;
+	border: 2px solid #207cca;
+	background-color: #207cca;
+	color: #fafafa;
+}

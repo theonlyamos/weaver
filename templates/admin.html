@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sikapa Fie</title>
+    <link rel="stylesheet" href="static/css/admin.css" media="screen">
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="static/js/index.js"></script>
+    <script type="text/javascript" src="static/js/sha512.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script type="text/javascript" src="static/js/ws.js"></script>
+    <script type="text/javascript" src="static/js/admin.js"></script>
+</head>
+<body>
+    <header>
+        <!-- <img class="propic" src="static/images/propic.png"/> -->
+        <h2></h2>
+        <img class="logout-button" src="static/images/logout.png"/>
+    </header>
+    <nav>
+        <div class="tab current_tab" data-action="home">
+            <img class="tabimg" src="static/images/home.png"/>
+        </div>
+        <div class="tab" data-action="pledge">
+            <img class="tabimg" src="static/images/pledge.png"/>
+        </div>
+        <div class="tab" data-action="payment">
+            <img class="tabimg" src="static/images/payment.png"/>
+        </div>
+        <div class="tab" data-action="help">
+            <img class="tabimg" src="static/images/help.png"/>
+        </div>
+    </nav>
+    <section>
+        <article class="home" style="display: block;">
+            <div class="tooltab">
+                <img class="pageimg" src="static/images/home.png"/>
+                <h4>Home</h4>
+                <img class="refresh" src="static/images/refresh.png"/>
+            </div>
+            <table class="details">
+                <tr class="users" data-action="users">
+                    <th class="name">Users</th>
+                    <td class="num" colspan="2">0</td>
+                </tr>
+                <tr class="pledges" data-action="pledges">
+                    <th class="name">Pledges</th>
+                    <td class="num">0</td>
+                    <td class="amount">GH&cent;0.00</td>
+                </tr>
+                <tr class="payments" data-action="payments">
+                    <th class="name">Redeemed</th>
+                    <td class="num">0</td>
+                    <td class="amount">GH&cent;0.00</td>
+                </tr>
+                <tr class="received" data-action="received">
+                    <th class="name">Total Received</th>
+                    <td class="num">0</td>
+                    <td class="amount">GH&cent;0.00</td>
+                </tr>
+                <tr class="paid" data-action="payments">
+                    <th class="name">Payments</th>
+                    <td class="num">0</td>
+                    <td class="amount">GH&cent;0.00</td>
+                </tr>
+                <tr class="feedbacks" data-action="feeds">
+                    <th class="name">Feedbacks</th>
+                    <td class="num" colspan="2">0</td>
+                </tr>
+            </table>
+        </article>
+        <article class="pledge">
+            <div class="tooltab">
+                <img class="pageimg" src="static/images/pledge.png"/>
+                <h4>Pledges</h4>
+                <img class="refresh" src="static/images/refresh.png"/>
+            </div>
+            <table class="pledges">
+                <tr class="info">
+                    <th class="name">User</th>
+                    <th class="name">Date</th>
+                    <th class="name">Amount</th>
+                </tr>
+            </table>
+        </article>
+        <article class="payment">
+            <div class="tooltab">
+                <img class="pageimg" src="static/images/payment.png"/>
+                <h4>Redeemed</h4>
+                <img class="refresh" src="static/images/refresh.png"/>
+            </div>
+            <table class="payouts">
+                <tr class="info">
+                    <th class="name">User</th>
+                    <th class="name">Date</th>
+                    <th class="name">Amount</th>
+                </tr>
+            </table>
+        </article>
+        <article class="help">
+            <div class="tooltab">
+                <img class="pageimg" src="static/images/help.png"/>
+                <h4>help</h4>
+                <img class="refresh" src="static/images/refresh.png"/>
+            </div>
+            <h5>FEEDBACK</h5>
+            <div class="feeds">
+            </div>
+            <div class="messages-container">
+
+            </div>
+            <div class="send-message">
+                <input class="message" autofocus autocomplete="autocomplete"/>
+                <input type="button" class="message-button" value="send"/>
+            </div>
+        </article>
+        </article>
+        <article class="users">
+            <div class="tooltab">
+                <img class="pageimg" src="static/images/propic.png"/>
+                <h4>Users</h4>
+                <img class="close" src="static/images/close.png"/>
+            </div>
+            <div class='search_bar'>
+                <input class='search' type='search' placeholder='search users'/>
+          </div>
+            <table class="users all">
+            </table>
+        </article>
+        <article class="pledges">
+            <div class="tooltab">
+                <img class="pageimg" src="static/images/pledge.png"/>
+                <h4>Pledges</h4>
+                <img class="close" src="static/images/close.png"/>
+            </div>
+            <table class="pledges all">
+                <tr class="info">
+                    <th class="name">Amount</th>
+                    <th class="name">Date</th>
+                </tr>
+            </table>
+        </article>
+        <article class="payments">
+            <div class="tooltab">
+                <img class="pageimg" src="static/images/payment.png"/>
+                <h4>Payments</h4>
+                <img class="close" src="static/images/close.png"/>
+            </div>
+            <table class="payments all">
+                <tr class="info">
+                    <th class="name">Amount</th>
+                    <th class="name">Date</th>
+                </tr>
+            </table>
+        </article>
+        <article class="feeds">
+            <div class="tooltab">
+                <img class="pageimg" src="static/images/help.png"/>
+                <h4>Feeds</h4>
+                <img class="close" src="static/images/close.png"/>
+            </div>
+            <table class="feeds all">
+                <tr class="info">
+                    <th class="name">Amount</th>
+                    <th class="name">Date</th>
+                </tr>
+            </table>
+    </section>
+    <div class="loader-page">
+        <img class="loading" src="static/images/loadingAnimation.gif"/>
+    </div>
+    <div class="notification">
+        <img class='notify' src='static/images/notify.png'/>
+        <span class='notifier'>0</span>
+    </div>
+</body>
+</html>

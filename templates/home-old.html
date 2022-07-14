@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sikapa Fie</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome-all.min.css">
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon" />
+    <script type="text/javascript" src="static/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="static/js/sha512.min.js"></script>
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>-->
+    <script src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    
+</head>
+
+<body style="background: linear-gradient(to bottom, #00b7ea 0%,#009ec3 100%);">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="d-flex text-center align-items-center justify-content-center" id="trappedFlies"
+                    style="height: 100vh;">
+
+                </div>
+            </div>
+            <div class="col-sm-7 shadow p-0 mt-4" id="flyInfo" style="max-height: 90vh; overflow-x: hidden; overflow-y: auto;">
+                <ul class="nav nav-pills border-bottom bg-white" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active rounded-0" id="home-tab" data-bs-toggle="pill"
+                            data-bs-target="#homeTab" type="button" role="tab" aria-controls="homeTab"
+                            aria-selected="true">Home</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link rounded-0" id="profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#terminalTab" type="button" role="tab" aria-controls="terminalTab"
+                            aria-selected="false">Terminal</button>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active pt-2" id="homeTab" role="tabpanel" aria-labelledby="home-tab">...</div>
+                    <div class="tab-pane bg-dark pt-2" id="terminalTab" role="tabpanel" aria-labelledby="terminal-tab">
+                        <div class="cmd">
+                            <!--
+                            <div class="cmd_titlebar">
+                                <div class="cmd_title">
+                                    <h3><span class="user">admin</span><span class="at">@</span><span class="title">cmd</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            -->
+                            <div class="cmd_board d-flex">
+                                <div class="cmd_line d-flex justify-content-start align-items-center">
+                                    <label for="cmd_input">&dollar;</label>
+                                    <input type="text" class="cmd_input outline-none ms-1" id="cmd_input"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="static/js/script.js"></script>
+<!--<script type="text/javascript" src="static/js/ws.js"></script>-->
+</body>
+</html>
