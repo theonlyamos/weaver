@@ -103,6 +103,9 @@ def ConnectWebsocket():
     try:
         sleep(5)
         websocket.connect('http://localhost:5000',transports=['websocket'])
+    except KeyboardInterrupt:
+        print('Exiting...')
+        sys.exit(1)
     except:
         ConnectWebsocket()
 
@@ -112,7 +115,7 @@ def CountActiveConnections():
     
 def ListWSConnections(conn=False):
     global WS_CONNECTIONS
-    print(len(WS_CONNECTIONS))
+    print(WS_CONNECTIONS)
 
 def ListConnections(conn=False):
     """
